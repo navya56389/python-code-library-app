@@ -1,0 +1,24 @@
+---
+services:
+      db:
+        image: navya56389/myrepo:dbimage
+        ports:
+          - "3306:3306"
+      auth_service:
+        image: navya56389/myrepo:authimage
+        ports:
+          - "5001:5001"
+
+      book_service:
+        image: navya56389/myrepo:bookimage
+        ports:
+          - "5002:5002"
+      borrow_service:
+        image: navya56389/myrepo:borrowimage
+        ports:
+          - "5003:5003"
+
+      frontend:
+        image: navya56389/myrepo:frontendimage
+        ports:
+          - "5000:5000"
